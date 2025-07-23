@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #fce3f3, #dceaff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 15px;
+  animation: fadeInBody 1s ease-in;
+}
+@keyframes fadeInBody {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.container {
+  background: #ffffff;
+  max-width: 500px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.7s ease-out;
+}
+@keyframes slideIn {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+h1 {
+  color: #e91e63;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 25px;
+  position: relative;
+}
+h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #e91e63;
+  margin: 10px auto 0;
+  border-radius: 10px;
+}
+label {
+  display: block;
+  margin: 15px 0 5px;
+  color: #333;
+  font-weight: 600;
+}
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-top: 5px;
+  font-size: 15px;
+  background-color: #fafafa;
+  transition: border 0.3s;
+}
+input:focus {
+  border-color: #e91e63;
+  outline: none;
+}
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #25D366;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+button:hover {
+  background-color: #1ebe5d;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.share-section {
+  margin-top: 20px;
+}
+#clickCount, #shareCompleteMsg {
+  text-align: center;
+  margin-top: 10px;
+  color: #555;
+  font-size: 14px;
+}
+#confirmation {
+  background: #e0ffd8;
+  padding: 20px;
+  text-align: center;
+  color: #2e7d32;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
